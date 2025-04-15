@@ -1,0 +1,81 @@
+@use './mixins.scss' as *;
+
+html {
+    height: auto;
+    font-size: 10px;
+
+    @include media(904px) {
+        font-size: calc(100vw / 904 * 10);
+    }
+
+    &,
+    * {
+        // firefox
+        scrollbar-color: #e9ded4 transparent;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-thumb {
+            border-radius: 0.2rem;
+        }
+
+        &::-webkit-scrollbar {
+            width: 0.4rem; /* ширина для вертикального скролла */
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #e9ded4;
+        }
+    }
+}
+
+html,
+body,
+#root {
+    min-height: 100vh;
+}
+
+body {
+    color: var(--default-text-color);
+    font-family: var(--font-inter);
+    font-size: var(--default-font-size-l);
+    font-style: normal;
+    line-height: var(--default-line-height);
+    font-optical-sizing: auto;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    position: relative;
+    flex: 1;
+    height: 100vh;
+    overflow: auto;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: var(--wrapper-max-width);
+    min-height: inherit;
+    margin: 0 auto;
+}
+
+.main_wrapper {
+    padding-inline: 5rem;
+}
+
+button {
+    transition:
+        0.25s ease-out color,
+        0.25s background-color;
+}
+
+a {
+    color: inherit;
+}

@@ -1,0 +1,27 @@
+._ {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    height: 4.2rem;
+    padding-inline: 0.9rem;
+    transition: 0.2s ease-in;
+    background:
+        linear-gradient(0deg, #d9d9d9, #d9d9d9),
+        linear-gradient(0deg, rgba(0, 0, 0, 20%), rgba(0, 0, 0, 20%));
+    box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 25%);
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    gap: 1rem;
+
+    &._hidden {
+        transform: translateY(-150%);
+    }
+}
+
+.avatar {
+    width: 3.2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
